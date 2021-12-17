@@ -1,0 +1,33 @@
+[package]
+name = "dlib_face_recognition"
+version = "0.1.9"
+authors = ["Ashley <expenses@airmail.cc>", "h <besqer996@gnu.ac.kr>, João Pedro Sanches Dovichi <jsanchesdovichi@gmail.com>"]
+edition = "2021"
+
+description = "Unofficial Rust wrappers to the C++ library dlib, face recognition tools"
+repository = "https://github.com/JSanchesDovichi/dlib-face-recognition"
+readme = "README.md"
+license = "BSD-3-Clause"
+
+build = "build.rs"
+
+include = [
+    "src/**/*.rs",
+    "build.rs",
+    "Cargo.toml",
+    "LICENSE",
+]
+
+[lib]
+name = "dlib_face_recognition"
+crate-type = ["cdylib"]
+
+[dependencies]
+cpp = "0.5.6"
+image = "0.23.14"
+
+[build-dependencies]
+cpp_build = "0.5.6"
+
+[dev-dependencies]
+lazy_static = "1.4"
